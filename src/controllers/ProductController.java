@@ -3,8 +3,6 @@ package controllers;
 import models.Product;
 import views.SalesView;
 
-import java.text.DecimalFormat;
-
 import static utils.Rounder.roundUp;
 
 public class ProductController {
