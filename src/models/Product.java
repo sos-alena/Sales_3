@@ -3,8 +3,6 @@ package models;
 import base.Fiscal;
 import base.Income;
 
-import java.text.DecimalFormat;
-
 public class Product implements Income, Fiscal {
 
     private String name;
@@ -44,11 +42,11 @@ public class Product implements Income, Fiscal {
 
     @Override
     public double pay(double tax, double sum) {
-        return sum - tax;
+        return (sum - tax);
     }
 
     @Override
     public double tax(double sum) {
-        return sum * RATE;
+        return (sum * RATE);
     }
 }
