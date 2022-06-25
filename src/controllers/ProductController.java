@@ -19,15 +19,20 @@ public class ProductController {
 
         view.getInputs();
         String name = model.getName();
-        double pay =(roundUp(model.pay(), 2));
-        double tax = (roundUp(model.tax(pay), 2));
-        double getIncome = (roundUp(model.pay(tax, pay), 2));
+        double pay = model.pay();
+        String pays = roundUp(pay);
+
+        double tax = model.tax(pay);
+        String taxes = roundUp(tax);
+
+        double getIncome = model.pay(tax, pay);
+        String getIncomes = roundUp(getIncome);
 
 
         String output = "Name product: " + name + "\n"
-                + "Total income (grn.): " + pay + "\n"
-                + "Tax amount (grn.): " + tax + "\n"
-                + "Net income (grn.): " + getIncome;
+                + "Total income (grn.): " + pays + "\n"
+                + "Tax amount (grn.): " + taxes + "\n"
+                + "Net income (grn.): " + getIncomes;
 
         view.getOutput(output);
     }
