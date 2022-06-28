@@ -19,6 +19,7 @@ public class ProductController {
 
         view.getInputs();
         String name = model.getName();
+
         double pay = model.pay();
         String pays = roundUp(pay);
 
